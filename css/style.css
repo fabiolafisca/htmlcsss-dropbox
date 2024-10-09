@@ -1,0 +1,282 @@
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+    
+    ul {
+    list-style: none;
+    }
+    
+    a {
+    text-decoration: none;
+    color: inherit;
+    }
+    
+    img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    }
+    
+    :root {
+    /* colors variable */
+    --color-text-white: #ffffff;
+    --color-text-black: #000000;
+    --color-text-dark-red: #61082b;
+    --color-bg-white: #ffffff;
+    --color-bg-black: #000000;
+    --color-bg-bright-blue: #0061ff;
+    --color-bg-light-blue: #b4d0e7;
+    --color-bg-dull-blue: #0093ce;
+    --color-bg-light-green: #a2d39b;
+    --color-bg-thin-green: #d1e9cd;
+    --color-bg-dark-red: #61082b;
+    --color-bg-light-red: #ff1c1c;
+    --color-bg-red: #d5001f;
+    --color-bg-yellow: #ffd830;
+    --color-light-grey: #bbbbbb;
+    --color-grey: #6b6b6b;
+    /* spacers */
+    --gap-xs: 5px;
+    --gap-md: 15px;
+    --gap-lg: 30px;
+    --gap-xl: 45px;
+    --p-block-lg: 50px;
+    --p-6-12: 6px 12px;
+    --p-30-20: 30px 20px;
+    /* text dims */
+    --text-xl: 4rem;
+    --text-lg: 2rem;
+    }
+    
+    /* debug */
+    .debug {
+    border: 1px solid red;
+    }
+    
+    /* flex utilities */
+    .d-flex {
+    display: flex;
+    flex-wrap: wrap;
+    }
+    
+    .flex-col {
+    flex-direction: column;
+    }
+    
+    .flex-center {
+    justify-content: center;
+    align-items: center;
+    }
+    
+    .items-center {
+    align-items: center;
+    }
+    
+    .items-start {
+    align-items: flex-start;
+    }
+    
+    .content-between {
+    justify-content: space-between;
+    }
+    
+    /* spacers */
+    .gap-xs {
+    gap: var(--gap-xs);
+    }
+    .gap-md {
+    gap: var(--gap-md);
+    }
+    
+    .gap-lg {
+    gap: var(--gap-lg);
+    }
+    .gap-xl {
+    gap: var(--gap-xl);
+    }
+    
+    .p-block-lg {
+    padding-block: var(--p-block-lg);
+    }
+    .p-6-12 {
+    padding: var(--p-6-12);
+    }
+    .p-10-20 {
+    padding: var(--p-30-20);
+    }
+    
+    /* bg-colors */
+    .bg-white {
+    background-color: var(--color-bg-white);
+    }
+    
+    .bg-light-blue {
+    background-color: var(--color-bg-light-blue);
+    }
+    /* text-colors */
+    .text-grey {
+    color: var(--color-grey);
+    }
+    .text-bright-blue {
+    color: var(--color-bg-bright-blue);
+    }
+    
+    /* text dimensions */
+    .text-xl {
+    font-size: var(--text-xl);
+    }
+    
+    .text-lg {
+    font-size: var(--text-lg);
+    }
+    
+    .text-bold {
+    font-weight: 700;
+    }
+    .text-ultra-bold {
+    font-weight: 900;
+    }
+    
+    /* containers */
+    .outer-container {
+    border: 1px solid green;
+    max-width: 1150px;
+    margin-inline: auto;
+    padding-inline: 20px;
+    }
+    
+    .inner-container {
+    border: 1px solid blue;
+    max-width: 950px;
+    margin-inline: auto;
+    padding-inline: 20px;
+    }
+    
+    /* components */
+    .btn {
+    background-color: var(--color-bg-bright-blue);
+    color: var(--color-text-white);
+    padding: var(--p-6-12);
+    }
+    
+    body {
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+    color: var(--color-text-black);
+    }
+    
+    /* header */
+    header {
+    padding: 20px 15px;
+    box-shadow: 0 2px 10px rgb(85, 85, 85);
+    margin-bottom: 40px;
+    position: fixed;
+    width: 100vw;
+    z-index: 1000;
+    }
+    
+    header nav li a {
+    display: block;
+    padding: var(--p-6-12);
+    }
+    
+    header nav li:not(#logo) a:hover:after {
+    content: "";
+    display: block;
+    outline: 2px solid var(--color-bg-light-blue);
+    width: 100%;
+    position: relative;
+    top: calc(20px + 6px + 1px);
+    }
+    
+    /* main */
+    main {
+    }
+    
+    /* jumbo */
+    #jumbo-section {
+    padding-block: 160px 0;
+    }
+    
+    /* lo spingo dall'alto in modo relative cosi sborda dal bg */
+    .jumbo-caption {
+    position: relative;
+    top: 50px;
+    }
+    
+    .jumbo-caption .arrow-d {
+    font-size: 2.8rem;
+    margin-top: 25px;
+    }
+    
+    .jumbo-left {
+    width: 30%;
+    }
+    
+    .jumbo-right {
+    width: 70%;
+    }
+    
+    /* section 1 */
+    #business-plan {
+    padding-top: 100px;
+    }
+    
+    /* puramente decorativo, simulo una checkbox, non uso border altrimenti visivamente vado oltre 1rem di dimensioni */
+    .business-plan .invoice>span::before {
+    content: "";
+    display: inline-block;
+    background-color: #ffffff;
+    box-shadow: inset 0 0 0 3.5px var(--color-bg-bright-blue);
+    border-radius: 50%;
+    width: 1rem;
+    height: 1rem;
+    cursor: pointer;
+    }
+    /* la seconda checkbox la disegno come non checkata */
+    .business-plan .invoice>span:nth-child(2):before {
+    box-shadow: inset 0 0 0 1px var(--color-grey)
+    }
+    
+    /* singola business option */
+    .business-options > div {
+    flex: 1 0 0;
+    border: 1px solid var(--color-light-grey);
+    
+    }
+    /* la singola business option è composta da due macro div */
+    /* per avere il bordo di separazione, metto un border bottom al primo macro div */
+    .business-options > div > div:first-child {
+    border-bottom: 1px solid var(--color-light-grey);
+    }
+    /* ad acquista ora che è lultima ancora della singola option gli rimetto piu o meno le impostazioni di default */
+    .business-options > div a:last-child {
+    text-decoration: underline;
+    color: var(--color-bg-bright-blue);
+    }
+    
+    
+    .business-options .line-spacing {
+    border: 1px solid var(--color-light-grey);
+    width: 30%;
+    }
+    
+    /* footer */
+    footer {
+    background-color: #505050;
+    padding-block: 60px 30px;
+    }
+    
+    .bottom-footer div {
+    display: inline-block;
+    margin-top: 80px;
+    padding-top: 40px;
+    border-top: 2px solid blue;
+    }
